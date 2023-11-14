@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>car modification Website</title>
+    <!-- Include the Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-800"><br>
+    <h1 class="text-4xl  text-white font-semibold mb-5 text-center">BOOK MY VISIT</h1>
+    <div class="min-h-screen flex items-center justify-center">
+        <div class="bg-black text-white p-8 rounded shadow-md max-w-md w-full">
+            <h2 class="text-2xl font-semibold mb-4 text-center">THE CAR DECKER</h2>
+            
+            <!-- Login Form -->
+            <form id="signup-form" class="space-y-4" onsubmit="return validateForm()">
+                <div class="space-y-2">
+                    <label for="login-name" class="text-sm font-medium">Name</label>
+                    <input type="text" id="login-name" class="w-full px-3 py-2 border rounded-lg bg-white text-black" placeholder="Enter your name" required>
+                </div>
+                <div class="space-y-2">
+                    <label for="login-email" class="text-sm font-medium">Email Address</label>
+                    <input type="email" id="login-email" class="w-full px-3 py-2 border rounded-lg bg-white text-black" placeholder="Enter your email" required>
+                </div>
+                <div class="space-y-2">
+                    <label for="login-num" class="text-sm font-medium">Phone Number</label>
+                    <input type="tel" id="login-num" class="w-full px-3 py-2 border rounded-lg bg-white text-black" placeholder="Enter your phone number" required>
+                </div>
+                <div class="space-y-2">
+                    <label for="login-password" class="text-sm font-medium">Password</label>
+                    <input type="password" id="login-password" class="w-full px-3 py-2 border rounded-lg bg-white text-black" placeholder="Enter your password" required>
+                </div>
+                <br>
+                <center>
+                    <button type="submit" class="w-full bg-white text-black p-2 rounded-lg hover:bg-gray-800 hover:text-white">Sign Up</button>
+                </center>
+            </form>
+            
+            <div class="mt-4 text-center">
+                <p class="text-sm">Already have an account? <a href="login.html" class="text-blue-500 hover:underline">Log In</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById('login-name').value;
+            var email = document.getElementById('login-email').value;
+            var phone = document.getElementById('login-num').value;
+            var password = document.getElementById('login-password').value;
+
+            // Simple validation
+            if (name.trim() === '' || email.trim() === '' || phone.trim() === '' || password.trim() === '') {
+                alert('Please fill in all fields');
+                return false;
+            }
+
+            // Redirect to index.html on successful sign-up
+            window.location.href = 'index.html';
+
+            // Prevent the default form submission
+            return false;
+        }
+    </script>
+</body>
+</html>

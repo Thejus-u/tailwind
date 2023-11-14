@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <!-- Include the Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-800"><br>
+    <h1 class="text-4xl  text-white font-semibold mb-5 text-center">BOOK MY APPOINTMENT</h1>
+    <div class="min-h-screen flex items-center justify-center">
+        <div class="bg-black text-white p-8 rounded shadow-md max-w-md w-full">
+            <h2 class="text-2xl font-semibold mb-4 text-center">Welcome to The Car Decker</h2>
+            
+            <!-- Login Form -->
+            <form id="login-form" class="space-y-4">
+                <div class="space-y-2">
+                    <label for="login-email" class="text-sm font-medium">Email Address</label>
+                    <input type="email" id="login-email" class="w-full px-2 py-1 border rounded-lg bg-white text-black" placeholder="Enter your email" required>
+                </div>
+                <div class="space-y-2">
+                    <label for="login-password" class="text-sm font-medium">Password</label>
+                    <input type="password" id="login-password" class="w-full px-2 py-1 border rounded-lg bg-white text-black" placeholder="Enter your password" required>
+                </div>
+                <br>
+                <center>
+                    <button type="button"  class="w-full bg-white text-black p-2 rounded-lg hover:bg-gray-800 hover:text-white" onclick="validateForm()">Log In</button>
+                </center>
+            </form>
+            
+            <div class="mt-4 text-center">
+                <p class="text-sm">Don't have an account? <a href="signup.html" class="text-blue-500 hover:underline">Sign Up</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+            var email = document.getElementById('login-email').value;
+            var password = document.getElementById('login-password').value;
+
+            // Simple validation
+            if (email.trim() === '' || password.trim() === '') {
+                alert('Please fill in all fields');
+                return;
+            }
+
+            // Redirect to index.html on successful login
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

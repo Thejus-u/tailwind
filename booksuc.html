@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Successful - Tourism Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-black text-white">
+
+<!-- Navigation Bar -->
+<nav class="bg-black p-4">
+    <div class="container mx-auto">
+        <div class="flex justify-between items-center">
+            <a href="index.html" class="text-white text-2xl font-semibold">My Tours</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Success Message Section -->
+<div class="bg-cover bg-center h-80 bg-image-url text-white flex items-center" style="background-image: url('success-background.jpg');">
+    <div class="container mx-auto text-center">
+        <h1 class="text-4xl font-semibold">Booking Successful</h1>
+        <p class="text-lg mt-2">Thank you for choosing our services. Your booking is confirmed.</p>
+        <a href="index.html" class="mt-4 bg-white hover:bg-gray-300 text-black font-semibold px-6 py-2 rounded-full inline-block">Continue to Home</a>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-black text-white p-4 mt-8">
+    <div class="container mx-auto text-center">
+        <p>&copy; 2023 Tourism Site. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Automatically redirect to the home page -->
+<script>
+    setTimeout(function () {
+        window.location.href = "/";
+    }, 5000); // Redirect after 5 seconds (adjust as needed)
+</script>
+
+</body>
+</html>
